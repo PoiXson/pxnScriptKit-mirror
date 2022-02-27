@@ -1,0 +1,30 @@
+name: ${project.name}
+main: com.poixson.scriptkit.ScriptKitPlugin
+version: ${project.version}
+api-version: ${spigot-short-version}
+load: STARTUP
+depend: [ Multiverse-Core, pxnCommonBukkit ]
+authors: [ lorenzop ]
+website: ${project.url}
+description: ${project.description}
+commands:
+    scriptkit:
+        description: "Commands: generate, clear"
+        usage: "Usage: /scriptkit reload"
+permission-message: "You don't have permission to use this command."
+permissions:
+    scriptkit.*:
+        default: op
+        children:
+            scriptkit.reload: true
+            scriptkit.generate: true
+            scriptkit.clear: true
+    scriptkit.reload:
+        default: op
+        description: Reload scripts.
+    scriptkit.generate:
+        default: op
+        description: Generate an area of the world.
+    scriptkit.clear:
+        default: op
+        description: Clear the area (CAUTION!)
