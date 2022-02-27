@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generated: Sun Feb 27 02:28:26 AM EST 2022 -->
+<!-- Generated: Sun Feb 27 02:30:25 AM EST 2022 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -61,6 +61,13 @@
 				<filtering>true</filtering>
 				<includes>
 					<include>plugin.yml</include>
+				</includes>
+			</resource>
+			<resource>
+				<directory>${project.basedir}/resources/scripts</directory>
+				<filtering>false</filtering>
+				<includes>
+					<include>*.js</include>
 				</includes>
 			</resource>
 		</resources>
