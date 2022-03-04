@@ -64,10 +64,10 @@
 				</includes>
 			</resource>
 			<resource>
-				<directory>${project.basedir}/resources/scripts</directory>
+				<directory>${project.basedir}/resources</directory>
 				<filtering>false</filtering>
 				<includes>
-					<include>*.js</include>
+					<include>scripts/*.js</include>
 				</includes>
 			</resource>
 		</resources>
