@@ -12,8 +12,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.mozilla.javascript.Context;
 
-import com.poixson.commonbukkit.tools.chunks.ChunkDAO;
-import com.poixson.commonbukkit.tools.chunks.ChunkDAO_Generate;
+import com.poixson.scriptkit.api.chunks.ChunkDAO;
+import com.poixson.scriptkit.api.chunks.ChunkDAO_Generate;
 import com.poixson.scriptkit.scripting.CraftScript;
 import com.poixson.scriptkit.source.ScriptLoader;
 
