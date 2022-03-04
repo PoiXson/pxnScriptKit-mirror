@@ -39,6 +39,14 @@ public class CraftScript {
 
 
 
+	private static final AtomicBoolean inited = new AtomicBoolean(false);
+	static {
+		if (inited.compareAndSet(false, true))
+				RhinoContextFactory.init();
+	}
+
+
+
 	public CraftScript(final ScriptLoader loader) {
 		this.loader = loader;
 		// shared scope

@@ -13,7 +13,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 import com.poixson.scriptkit.api.ChunkGeneratorFactory;
 import com.poixson.scriptkit.api.ScriptChunkGenerator;
 import com.poixson.scriptkit.api.ScriptKitAPI;
-import com.poixson.scriptkit.scripting.CraftScriptContextFactory;
 import com.poixson.scriptkit.scripting.ScriptCleanupTask;
 import com.poixson.tools.xTime;
 
@@ -34,12 +33,6 @@ public class ScriptKitPlugin extends JavaPlugin implements ChunkGeneratorFactory
 
 
 	protected final ScriptCleanupTask cleanup = new ScriptCleanupTask();
-
-
-
-	static {
-		CraftScriptContextFactory.init();
-	}
 
 
 
