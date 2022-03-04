@@ -8,14 +8,14 @@ import org.mozilla.javascript.ContextFactory;
 import com.poixson.tools.Keeper;
 
 
-public class CraftScriptContextFactory extends ContextFactory {
+public class RhinoContextFactory extends ContextFactory {
 
 	protected static final AtomicBoolean inited = new AtomicBoolean(false);
 
 
 
 	public static void init() {
-		final CraftScriptContextFactory factory = new CraftScriptContextFactory();
+		final RhinoContextFactory factory = new RhinoContextFactory();
 		Keeper.add(factory);
 		if (inited.compareAndSet(false, true)) {
 			ContextFactory.initGlobal(factory);
