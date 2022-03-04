@@ -56,7 +56,7 @@ public class ScriptChunkGenerator extends ChunkGenerator implements Listener {
 			);
 //TODO: find a better way
 //worldInfo.getSeed()
-		this.craftscript.call(ScriptHook.GEN.name, chunk);
+		this.craftscript.call(ScriptHookType.GEN.name, chunk);
 	}
 
 
@@ -183,11 +183,11 @@ public class ScriptChunkGenerator extends ChunkGenerator implements Listener {
 
 	@Override
 	public boolean canSpawn(final World world, final int x, final int z) {
-		final Object result = this.craftscript.call(ScriptHook.CAN_SPAWN.name, x, z);
+		final Object result = this.craftscript.call(ScriptHookType.CAN_SPAWN.name, x, z);
 		return Context.toBoolean(result);
 	}
 	public Location getFixedSpawnLocation(final World world, final Random random) {
-		final Object result = this.craftscript.call(ScriptHook.GET_SPAWN.name, world);
+		final Object result = this.craftscript.call(ScriptHookType.GET_SPAWN.name, world);
 		if (result instanceof Location) {
 			return (Location) result;
 		}

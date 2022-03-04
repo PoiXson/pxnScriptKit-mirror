@@ -1,7 +1,7 @@
 package com.poixson.scriptkit.api;
 
 
-public enum ScriptHook {
+public enum ScriptHookType {
 	GEN("generate"),
 	POST("post_generate"),
 	CAN_SPAWN("can_spawn"),
@@ -13,7 +13,7 @@ public enum ScriptHook {
 
 
 
-	ScriptHook(final String name) {
+	ScriptHookType(final String name) {
 		this.name = name;
 	}
 
