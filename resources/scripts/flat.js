@@ -1,3 +1,4 @@
+//# include = inc.js
 /* ===============================================================================
  *  Copyright (c) 2022 lorenzop
  *  <https://poixson.com>
@@ -35,7 +36,6 @@ importClass(Packages.com.poixson.commonbukkit.utils.BukkitUtils);
 
 function generate(chunk) {
 //	out.println("CHUNK x: " + chunk.absX + " z: " + chunk.absZ);
-	let buffer = [ ];
 //TODO
 var args = "1=bedrock,2=stone,3=dirt";
 	var argsArray = args.split(",");
@@ -47,11 +47,11 @@ var args = "1=bedrock,2=stone,3=dirt";
 		for (var y=0; y<height; y++) {
 			for (var z=0; z<16; z++) {
 				for (var x=0; x<16; x++) {
-					buffer.push({ type: block, x:x, y:y+yy, z:z });
+					setBlock(x, y+yy, z, block);
 				} // end x
 			} // end z
 		} // end y
 		yy += height;
 	} // end index
-	chunk.setBlocksJS(buffer);
+	commitBlocks(chunk);
 }
